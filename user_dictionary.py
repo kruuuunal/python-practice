@@ -25,6 +25,9 @@ state = input("State (xx): ")
 checkstate(state)
 userinfo["State"] = state
 
+zip = input("Zip Code: ")
+userinfo["Zip"] = zip #need to add a function to check zip codes (length and if all values are integers)
+
 email = input("Email: ")
 checkemail(email)
 userinfo["Email"] = email
