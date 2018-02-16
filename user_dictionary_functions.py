@@ -24,7 +24,8 @@ def checkdateofbirth(x): #creating lists of values to check the dateofbirth inpu
 
     while x[6:8] not in years:
         print ("Please input your date of birth in the proper format (mm/dd/yyyy)")
-        x = input("Date of Birth (format: mm/dd/yyyy): ") 
+        x = input("Date of Birth (format: mm/dd/yyyy): ")  
+    return (x)
 
 def checkemail(x):        
     while x[-4] != ".":
@@ -38,6 +39,7 @@ def checkemail(x):
     while "@" not in list(x):
         print ("Please input your email")
         x = input("Email: ")
+    return (x)
 
 def checkstate(x):
     stateabbreviations = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
@@ -48,3 +50,29 @@ def checkstate(x):
     while x.upper() not in stateabbreviations:
         print ("Please input your state")
         x = input("State: ")
+    if x.upper() in stateabbreviations:
+        return (x)
+
+def checkzip(x):
+    while len(x) != 5:
+        print ("Please enter your zip")
+        x = input("Zip Code: ")
+    
+    acceptablenumberslist = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+    
+    while x[0] not in acceptablenumberslist: #checking to see if all inputted values are numbers
+        print ("Please enter your zip")
+        x = input("Zip Code: ")
+    while x[1] not in acceptablenumberslist:
+        print ("Please enter your zip")
+        x = input("Zip Code: ")
+    while x[2] not in acceptablenumberslist:
+        print ("Please enter your zip")
+        x = input("Zip Code: ")       
+    while x[3] not in acceptablenumberslist:
+        print ("Please enter your zip")
+        x = input("Zip Code: ")
+    while x[4] not in acceptablenumberslist:
+        print ("Please enter your zip")
+        x = input("Zip Code: ")
+    return (x)
